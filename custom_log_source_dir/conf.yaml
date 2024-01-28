@@ -1,0 +1,8 @@
+# Taken from https://docs.datadoghq.com/logs/log_collection/java/?tab=log4j#configure-the-datadog-agent
+logs:
+- type: file
+  # The log file should be mounted in /logs directory in the datadog-agent docker container
+  path: "/logs/app.log"
+  service: docker-demo
+  source: java
+  sourcecategory: sourcecode
